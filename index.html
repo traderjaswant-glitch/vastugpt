@@ -1446,7 +1446,7 @@ async function callAPI(systemPrompt, messages) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${OPENROUTER_KEY}`, 'HTTP-Referer': 'https://vastugpt.vercel.app', 'X-Title': 'VastuGPT' },
       body: JSON.stringify({
-        model: 'anthropic/claude-sonnet-4-5',
+        model: 'meta-llama/llama-3.1-8b-instruct:free',
         max_tokens: 1000,
         messages: [{ role: 'system', content: systemPrompt }, ...messages]
       })
